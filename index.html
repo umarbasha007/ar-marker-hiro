@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="r2d2-obj" src="assets/r2-d2.obj"></a-asset-item>
+            <a-asset-item id="r2d2-mtl" src="assets/r2-d2.mtl"></a-asset-item>
+          </a-assets>
+          <a-marker preset='hiro'>
+            <a-entity 
+                obj-model="obj: #r2d2-obj; mtl: #r2d2-mtl"
+                scale="0.2 0.2 0.2"
+                position="0 -15 -40"></a-entity>
+
+          </a-marker>
+          <a-entity camera>
+          </a-entity>
+
+
+          <!-- <a-marker preset='hiro'>
+         
+          <a-entity 
+              scale="1.5, 1.5, 1.5" position="0,0,0" rotation="-90, 0, 0" obj-model="obj: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1094264/mountains.obj);" material="color: #A52A2A">
+          </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity> -->
+
+
+      <!-- <a-sky color="#ECECEC"></a-sky> -->
+    </a-scene>
+  </body>
+</html>
