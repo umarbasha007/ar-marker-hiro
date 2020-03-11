@@ -14,8 +14,11 @@
     <a-scene >
       
       <a-assets embedded arjs='sourceType: webcam;'>
-        <a-asset-item id="r2d2-obj" src="assets/r2-d2/r2-d2.obj"></a-asset-item>
-        <a-asset-item id="r2d2-mtl" src="assets/r2-d2/r2-d2.mtl"></a-asset-item>
+        <!-- <a-asset-item id="r2d2-obj" src="assets/r2-d2/r2-d2.obj"></a-asset-item>
+        <a-asset-item id="r2d2-mtl" src="assets/r2-d2/r2-d2.mtl"></a-asset-item> -->
+
+        <a-asset-item id="hat-obj" src="assets/retail/hat/hat.obj"></a-asset-item>
+        <a-asset-item id="hat-mtl" src="assets/retail/hat/hat.mtl"></a-asset-item>
       </a-assets>
 
       <!-- <a-entity 
@@ -34,18 +37,27 @@
         <!-- <a-sphere position="0 0.5 -1.5" radius="0.5" color="#EF2D5E"></a-sphere>
         <a-plane position="0 0 -1.5" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>
    -->
-        <a-entity 
-            obj-model="obj: #r2d2-obj; mtl: #r2d2-mtl"
+      <!--Hat-->
+      <a-entity 
+      obj-model="obj: #hat-obj; mtl: #hat-mtl"
+      scale="1 1 1"
+      position="0 0 -1.2" 
+      rotation="-90 0 0">
+    
+      </a-entity>
+
+        <!-- <a-entity 
+            obj-model="obj: #hat-obj; mtl: #hat-mtl"
             scale="0.03 0.03 0.03"
             position="0 0 0.0" 
             rotation="-90 0 0"
-        >
+        > -->
         <!-- <a-animation attribute="rotation"
                dur="10000"
                fill="forwards"
                to="0 360 0"
                repeat="indefinite"></a-animation> -->
-        </a-entity>
+        <!-- </a-entity> -->
         
 
       </a-marker>
