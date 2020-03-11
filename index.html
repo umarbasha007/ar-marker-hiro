@@ -6,22 +6,51 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    
   </head>
   <body>
-    <a-scene>
-        <a-assets>
-            <a-asset-item id="r2d2-obj" src="assets/r2-d2.obj"></a-asset-item>
-            <a-asset-item id="r2d2-mtl" src="assets/r2-d2.mtl"></a-asset-item>
-          </a-assets>
-          <a-marker preset='hiro'>
-            <a-entity 
-                obj-model="obj: #r2d2-obj; mtl: #r2d2-mtl"
-                scale="0.2 0.2 0.2"
-                position="0 -15 -40" 
-                position="0 0 0"
-                ></a-entity>
-                <!-- position="0 -15 -40" -->
-          </a-marker>
+  
+
+    <a-scene >
+      
+      <a-assets embedded arjs='sourceType: webcam;'>
+        <a-asset-item id="r2d2-obj" src="assets/r2-d2.obj"></a-asset-item>
+        <a-asset-item id="r2d2-mtl" src="assets/r2-d2.mtl"></a-asset-item>
+      </a-assets>
+
+      <!-- <a-entity 
+      scale="1.5 1.5 1.5" position="0 -1 -5" rotation="0 0 0" obj-model="obj: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1094264/mountains.obj);" material="color: #A52A2A">
+  </a-entity>
+  
+  <a-entity 
+                  obj-model="obj: #r2d2-obj; mtl: #r2d2-mtl"
+                  scale="0.2 0.2 0.2"
+                  position="0 -15 -40" 
+                  
+        ></a-entity> -->
+      <a-marker preset='hiro'>
+
+        <!-- use a-spher and a-plane to understand the dimension and directions-->
+        <!-- <a-sphere position="0 0.5 -1.5" radius="0.5" color="#EF2D5E"></a-sphere>
+        <a-plane position="0 0 -1.5" rotation="-90 0 0" width="1" height="1" color="#7BC8A4"></a-plane>
+   -->
+        <a-entity 
+        obj-model="obj: #r2d2-obj; mtl: #r2d2-mtl"
+        scale="0.03 0.03 0.03"
+        position="0 0 0.0" 
+        rotation="-90 0 0"
+        ></a-entity>
+        
+
+      </a-marker>
+     
+
+      <!-- <a-box></a-box> -->
+    
+  <!-- <a-marker-camera preset='hiro'><a-marker-camera> -->
+
+        
+          
           <!-- <a-entity camera>
           </a-entity> -->
 
